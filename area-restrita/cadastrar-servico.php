@@ -20,5 +20,3 @@
     $servico->setFotoServico($caminhoimagem);
 
     $servico->cadastrar($servico);
-        
-?>

@@ -29,7 +29,6 @@
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--/.preloader-->
 
-
   <!--end sideBar-->
   <header id="home">
     </div>
@@ -69,7 +68,6 @@
             <p class="animated fadeInRightBig">Você está na página de Alocamento de Produtos</p>
           </div>
         </div>
-
   </header>
   <!--/#home-->
 
@@ -83,17 +81,11 @@
         </div>
       </div>
 
-
       <div class="form">
-
         <div class="tab-content">
-
           <h1>Cadastrar Produtos</h1>
-
           <form action="produto.php" method="post">
-
             <div class="top-row">
-
           </form>
           <form method="post" action="cadastrar-produto.php" enctype="multipart/form-data">
             <h3>Informações sobre o produto</h3>
@@ -108,13 +100,9 @@
             <input type="submit" value="cadastrar">
           </form>
           </form>
-
         </div>
-
         </form>
-
       </div>
-
     </div><!-- tab-content -->
 
     </div> <!-- /form -->
@@ -138,46 +126,51 @@
         <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
           <div class="row">
             <div class="text-center col-sm-8 col-sm-offset-2">
-              <h1>Para Homens Modernos</h1>
+              <h1>Produtos Cadastrados</h1>
             </div>
           </div>
         </div>
       </div>
 
-      <?php foreach ($listaproduto as $linha) { ?>
-        <div class="text-center our-services">
-          <div class="row">
-            <div class="col-sm-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <div class="service-icon">
-                <img src="<?php echo $linha['fotoproduto'] ?>" class="img-responsive">
-                <span class="folio-expand"><a href=" <?php echo $linha['fotoproduto'] ?> " data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+      <?php foreach ($listaproduto as $linha)
+        echo ("
+        <div class='container'>
+          <div class='text-center our-services'>
+            <div class='row'>
+              <div class='col-sm-12 wow fadeInDown' data-wow-duration='1000ms' data-wow-delay='500ms'>
+                <div class='service-icon'>
+                  <img src=" . $linha['fotoproduto'] . " class='img-responsive'>
+                  <span class='folio-expand'><a href=" . $linha['fotoproduto'] . " data-lightbox='portfolio'><i class='fa fa-search-plus'></i></a></span>
+                </div>
+                <div class='service-info'>
+                  <h3>" . $linha['descproduto'] . "</h3>
+                  <p> " . $linha['textoproduto'] . "</p>
+                  <td><a class='button-card' href='excluir.php?excluirProduto=" . $linha['idproduto'] . "'>Excluir</a></td>
+                </div>
               </div>
-              <div class="service-info">
-                <h3><?php echo $linha['descproduto'] ?></h3>
-                <p> <?php echo $linha['textoproduto'] ?></p>
-              </div>
-              <br><br><br>
             </div>
           </div>
-        </div>
     </section>
-  <?php } ?>
+    ");
+      ?>
 
 
 
-  <!--libras-->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+      <!--libras-->
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
 
-  <!--end libras-->
+      <!--end libras-->
+    </section>
+  </section>
 
   <!--/#contact-->
   <footer id="footer">
@@ -202,9 +195,7 @@
     </div>
   </footer>
 
-  <div class="toggle" onclick="toggleMenu()">
-  </div>
-
+  <!-- JS -->
   <script type="text/javascript" src="../js/jquery.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>

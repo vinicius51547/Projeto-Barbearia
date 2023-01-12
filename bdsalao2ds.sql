@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `tbagenda` (
   `idagenda` int(11) NOT NULL,
   `dataAgenda` datetime DEFAULT NULL,
+  `horaagenda` time DEFAULT NULL,
   `idcliente` int(11) DEFAULT NULL,
   `idservico` int(11) DEFAULT NULL,
   `idusuario` int(11) DEFAULT NULL

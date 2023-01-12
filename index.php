@@ -504,7 +504,7 @@
                   <div class="col-sm-6">
                     <div class="form-group">
                       <input type="email" name="email" class="form-control" placeholder="E-mail" required="required">
-                    </div>
+                    </div>    
                   </div>
                 </div>
                 <div class="form-group">

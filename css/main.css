@@ -269,6 +269,8 @@ section {
   margin-top: 5px;
 }
 
+
+
 /*************************
 ********Service CSS*******
 **************************/
@@ -728,6 +730,104 @@ section {
 
 .twitter-left-control:hover, .twitter-right-control:hover {
   color: #fff;
+}
+
+/*************************
+********Card CSS*******
+**************************/
+
+.card h2 {
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+.card p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #555;
+  line-height: 22px;
+}
+
+.container-card {
+  margin: 0;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  min-width: 300px;
+  min-height: 400px;
+  margin: 4px;
+  perspective: 1000px;
+}
+
+.servico-img {
+  padding: 50px;
+}
+
+.button-card{
+  color: red;
+}
+
+.card {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -moz-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  transform: translateZ(0px);
+}
+
+.card:hover:after {
+  opacity: 1;
+}
+
+.card .side {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.card .front {
+  z-index: 2;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.card .info {
+  padding: 16px;
+}
+
+.front .img-card {
+  background-color: #f7f7f7;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 250px;
 }
 
 

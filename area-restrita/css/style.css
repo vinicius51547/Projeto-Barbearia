@@ -108,7 +108,7 @@ textarea {
   padding: 5px 10px;
   background: none;
   background-image: none;
-  border: 2px solid #1ab188;
+  border: 2px solid #9b9c9c;
   color: #ffffff;
   border-radius: 0;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
@@ -152,11 +152,7 @@ textarea {
   display: table;
   clear: both;
 }
-.top-row > div {
-  float: left;
-  width: 48%;
-  margin-right: 4%;
-}
+
 .top-row > div:last-child {
   margin: 0;
 }

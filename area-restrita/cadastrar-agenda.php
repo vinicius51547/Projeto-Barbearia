@@ -8,6 +8,7 @@
 
     $agenda = new Agenda();
     $agenda->setDataAgenda($_POST['dataAgenda']);
+    $agenda->setHoraAgenda($_POST['horaAgenda']);
    
     $cliente = new Cliente();
     $cliente->setIdCliente($_POST['idcliente']);
@@ -17,8 +18,6 @@
     $servico->setIdServico($_POST['idservico']);
     $agenda->setServico($servico);
      
-   
-   
 
     // echo($agenda->getCliente()->getIdCliente());
     $agenda->cadastrar($agenda);

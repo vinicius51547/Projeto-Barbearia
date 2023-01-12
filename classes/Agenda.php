@@ -5,7 +5,7 @@
     class Agenda{
         private $idagenda;
         private $dataagenda;
-        
+
         private $cliente;
         private $servico;
 
@@ -54,20 +54,28 @@
         public function cadastrar($agenda){
             $conexao = Conexao::conectar();
             //prepare statement
-            $stmt = $conexao->prepare("INSERT INTO tbagenda (dataAgenda, idCliente, idServico)
-                                        VALUES(?, ?, ?)");
+            $stmt = $conexao->prepare("INSERT INTO tbagenda (dataAgenda,horaagenda, idCliente, idServico)
+                                        VALUES(?, ?, ?, ?)");
             $stmt->bindValue(1, $agenda->getDataAgenda());
-            $stmt->bindValue(2, $agenda->getCliente()->getIdCliente());
-            $stmt->bindValue(3, $agenda->getServico()->getIdServico());            
+            $stmt->bindValue(2, $agenda->getHoraAgenda());
+            $stmt->bindValue(3, $agenda->getCliente()->getIdCliente());
+            $stmt->bindValue(4, $agenda->getServico()->getIdServico());            
             $stmt->execute();
         }
 
         public function listar(){
             $conexao = Conexao::conectar();
-            $querySelect = "SELECT idagenda, dataagenda, idcliente, idservico FROM tbagenda";
+            $querySelect = "SELECT idagenda, date_format(dataagenda, '%d/%m/%Y') as dataagenda, date_format(horaagenda, '%H:%i') as horaagenda,  tbcliente.nomecliente , tbservico.descservico 
+            FROM tbagenda
+            INNER JOIN tbservico
+                ON tbagenda.idservico = tbservico.idservico
+            INNER JOIN tbcliente
+                ON tbagenda.idcliente = tbcliente.idcliente";
+
             $resultado = $conexao->query($querySelect);
             $lista = $resultado->fetchAll();
             return $lista;   
+
+            
         }
     }
-?>

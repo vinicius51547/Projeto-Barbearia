@@ -111,9 +111,9 @@
     </div>
   </footer>
 
-  <div class="toggle" onclick="toggleMenu()">
   </div>
 
+  <!-- JS -->
   <script type="text/javascript" src="../js/jquery.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
