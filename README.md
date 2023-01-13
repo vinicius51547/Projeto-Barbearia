@@ -13,5 +13,3 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Xampp
 - Mysql
 
-### 🔗 Acesso ao projeto
-<p>Link para acessar o site https://eliteebarber.000webhostapp.com/</p>
