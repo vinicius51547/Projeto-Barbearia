@@ -14,5 +14,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Mysql
 
 ### 🔗 Acesso ao projeto
-Link do projeto https://elitebarbeer.000webhostapp.com/
+Link do projeto http://elitebarber.epizy.com/
 
